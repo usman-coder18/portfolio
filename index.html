@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Usman, a creative web developer specializing in responsive websites using modern web technologies like JavaScript, React, and Node.js.">
+    <title>Portfolio - Usman</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #1e90ff;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin: 10px 0 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #1e90ff;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #104e8b;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-section {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 40px;
+        }
+
+        .skills-section {
+            background-color: #f0f8ff;
+        }
+
+        .skills {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .skill {
+            width: 100px;
+            height: 100px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .skill:hover {
+            transform: scale(1.1);
+            background-color: #1e90ff;
+        }
+
+        .skill span {
+            font-weight: bold;
+            color: #333;
+            transition: color 0.3s;
+        }
+
+        .skill:hover span {
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1e90ff;
+            color: white;
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .contact-section {
+            padding: 60px 20px;
+            background-color: #1e90ff;
+            color: white;
+        }
+
+        .contact-section h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .contact-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .contact-info {
+            flex: 1;
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 40px;
+            color: #333;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            margin: 10px 0;
+        }
+
+        .contact-info a {
+            color: #1e90ff;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: #104e8b;
+        }
+
+        .contact-form {
+            flex: 2;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            background-color: #f9f9f9;
+            transition: border-color 0.3s;
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #1e90ff;
+            outline: none;
+        }
+
+        .contact-form button {
+            padding: 15px 30px;
+            background-color: #1e90ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #104e8b;
+        }
+
+        .projects-section {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #f1f2f6;
+        }
+
+        .projects-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            font-weight: 700;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            border-radius: 10px;
+        }
+
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9));
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+
+        .project-overlay h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+            font-weight: 600;
+        }
+
+        .project-overlay p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+            font-weight: 400;
+            max-width: 80%;
+            line-height: 1.4;
+        }
+
+        .project-overlay .view-project {
+            text-decoration: none;
+            background-color: #3498db;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+        }
+
+        .project-overlay .view-project:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .contact-info, .contact-form {
+                flex: 1 1 100%;
+            }
+
+            .contact-content {
+                flex-direction: column;
+            }
+
+            .skills {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .skills .skill {
+                width: 80px;
+                height: 80px;
+                margin-bottom: 20px;
+            }
+
+            .contact-form input, .contact-form textarea {
+                margin-bottom: 15px;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="InShot_20240411_031554075.jpg" alt="Profile photo of Usman, a web developer">
+        <h1>Usman</h1>
+        <p>Creative Web Developer specializing in modern, responsive designs.</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about" class="about-section">
+        <h2>About Me</h2>
+        <p>Hello! I am Usman, a passionate web developer proficient in creating modern, responsive websites. My expertise includes JavaScript, React, Node.js, and other cutting-edge web technologies.</p>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="skill"><span>HTML</span></div>
+            <div class="skill"><span>CSS</span></div>
+            <div class="skill"><span>JavaScript</span></div>
+            <div class="skill"><span>React</span></div>
+            <div class="skill"><span>Node.js</span></div>
+            <div class="skill"><span>Bootstrap</span></div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <h2>Project Showcase</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="Screenshot 2025-01-14 174543.png" alt="Screenshot of To-Do List App">
+                <div class="project-overlay">
+                    <h3>To-Do List App</h3>
+                    <p>Web-based to-do list application built with React and Node.js.</p>
+                    <a href="https://todo-list-phi-indol-53.vercel.app/" class="view-project">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="Screenshot 2025-01-14 175334.png" alt="Screenshot of Password Generator">
+                <div class="project-overlay">
+                    <h3>Password Generator</h3>
+                    <p>Generates secure, random passwords for online security.</p>
+                    <a href="https://password-generator-six-peach.vercel.app/" class="view-project">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="Screenshot 2025-01-14 191556.png" alt="Screenshot of Number Guessing Game">
+                <div class="project-overlay">
+                    <h3>Number Guessing Game</h3>
+                    <p>Interactive number guessing game with a dynamic UI.</p>
+                    <a href="https://number-guess-number.vercel.app/" class="view-project">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contact Me</h2>
+        <div class="contact-content">
+            <!-- Contact Information Section -->
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p>If you have any questions or would like to collaborate, feel free to reach out!</p>
+                <p><a href="mailto:usmanrafique078@gmail.com"><i class="fas fa-envelope"></i> usmanrafique078@gmail.com</a></p>
+                <p><a href="tel:+923366056254"><i class="fas fa-mobile-alt"></i> +923366056254</a></p>
+                <p><a href="https://www.linkedin.com/in/usmanrafique78/"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
+            </div>
+
+            <!-- Contact Form Section -->
+            <div class="contact-form">
+                <h3>Contact Form</h3>
+                <form action="submit_form.php" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Usman. All rights reserved.</p>
+    </footer>
+</body>
+</html>
