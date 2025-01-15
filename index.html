@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
+        /* Base Styles */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -16,10 +17,11 @@
             color: #333;
         }
 
+        /* Header */
         header {
             background-color: #1e90ff;
             color: white;
-            padding: 50px 20px;
+            padding: 60px 20px;
             text-align: center;
         }
 
@@ -32,20 +34,21 @@
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin: 0;
         }
 
         header p {
-            font-size: 1.2rem;
-            margin: 10px 0 0;
+            font-size: 1.3rem;
+            margin: 15px 0 0;
         }
 
+        /* Navigation */
         nav {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            padding: 20px;
+            gap: 30px;
+            padding: 25px;
             background-color: #ffffff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
@@ -61,18 +64,20 @@
             color: #104e8b;
         }
 
+        /* Sections */
         section {
-            padding: 60px 20px;
+            padding: 80px 30px;
             max-width: 1200px;
             margin: 0 auto;
             text-align: center;
         }
 
-        .about-section {
+        .about-section, .contact-info, .contact-form {
             background-color: #ffffff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
-            padding: 40px;
+            padding: 50px;
+            margin-bottom: 40px;
         }
 
         .skills-section {
@@ -82,13 +87,13 @@
         .skills {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
             flex-wrap: wrap;
         }
 
         .skill {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             background-color: #ffffff;
             border-radius: 50%;
             display: flex;
@@ -113,126 +118,17 @@
             color: white;
         }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #1e90ff;
-            color: white;
-            margin-top: 30px;
-        }
-
-        footer p {
-            margin: 0;
-        }
-
-        .contact-section {
-            padding: 60px 20px;
-            background-color: #1e90ff;
-            color: white;
-        }
-
-        .contact-section h2 {
-            font-size: 2rem;
-            margin-bottom: 40px;
-            text-align: center;
-        }
-
-        .contact-content {
-            display: flex;
-            justify-content: space-between;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
-
-        .contact-info {
-            flex: 1;
-            background-color: #ffffff;
-            border-radius: 8px;
-            padding: 40px;
-            color: #333;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .contact-info h3 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-        }
-
-        .contact-info p {
-            font-size: 1.1rem;
-            margin: 10px 0;
-        }
-
-        .contact-info a {
-            color: #1e90ff;
-            font-weight: bold;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 10px;
-            transition: color 0.3s;
-        }
-
-        .contact-info a:hover {
-            color: #104e8b;
-        }
-
-        .contact-form {
-            flex: 2;
-            background-color: #ffffff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 15px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
-            background-color: #f9f9f9;
-            transition: border-color 0.3s;
-        }
-
-        .contact-form input:focus, .contact-form textarea:focus {
-            border-color: #1e90ff;
-            outline: none;
-        }
-
-        .contact-form button {
-            padding: 15px 30px;
-            background-color: #1e90ff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .contact-form button:hover {
-            background-color: #104e8b;
-        }
-
+        /* Projects Section */
         .projects-section {
             text-align: center;
-            padding: 40px 20px;
+            padding: 60px 20px;
             background-color: #f1f2f6;
-        }
-
-        .projects-section h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #2c3e50;
-            font-weight: 700;
         }
 
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            gap: 30px;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -248,7 +144,8 @@
 
         .project-card img {
             width: 100%;
-            height: 100%;
+            max-width: 100%;  /* Ensure it adapts to container size */
+            height: auto;
             object-fit: cover;
             transition: transform 0.3s ease;
             border-radius: 10px;
@@ -286,26 +183,26 @@
         }
 
         .project-overlay h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
+            font-size: 1.7rem;
+            margin-bottom: 12px;
             text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
             font-weight: 600;
         }
 
         .project-overlay p {
-            font-size: 1rem;
-            margin-bottom: 15px;
+            font-size: 1.1rem;
+            margin-bottom: 18px;
             text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
             font-weight: 400;
             max-width: 80%;
-            line-height: 1.4;
+            line-height: 1.5;
         }
 
         .project-overlay .view-project {
             text-decoration: none;
             background-color: #3498db;
             color: white;
-            padding: 12px 24px;
+            padding: 14px 28px;
             border-radius: 5px;
             font-weight: bold;
             transition: background-color 0.3s ease, transform 0.3s ease;
@@ -317,17 +214,137 @@
             transform: scale(1.05);
         }
 
+        /* Contact Section */
+        /* .contact-section {
+            padding: 80px 30px;
+            background-color: #1e90ff;
+            color: white;
+        }
+
+        .contact-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .contact-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .contact-info {
+            flex: 1;
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 50px;
+            color: #333;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            font-size: 1.2rem;
+            margin: 12px 0;
+        }
+
+        .contact-info a {
+            color: #1e90ff;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: #104e8b;
+        }
+
+        .contact-form {
+            flex: 2;
+            background-color: #ffffff;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 18px;
+            margin-bottom: 25px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            background-color: #f9f9f9;
+            transition: border-color 0.3s;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #1e90ff;
+            outline: none;
+        }
+
+        .contact-form button {
+            padding: 18px 35px;
+            background-color: #1e90ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #104e8b;
+        }
+
+        .thank-you-message {
+            font-size: 1.5rem;
+            color: #1e90ff;
+            margin-top: 20px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .thank-you-message.show {
+            opacity: 1;
+        } */
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: #1e90ff;
+            color: white;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
         /* Mobile Optimization */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
             header p {
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
 
-            .contact-info, .contact-form {
+            .contact-info,
+            .contact-form {
                 flex: 1 1 100%;
             }
 
@@ -341,109 +358,448 @@
             }
 
             .skills .skill {
-                width: 80px;
-                height: 80px;
-                margin-bottom: 20px;
+                width: 90px;
+                height: 90px;
+                margin-bottom: 25px;
             }
 
-            .contact-form input, .contact-form textarea {
-                margin-bottom: 15px;
+            .contact-form input,
+            .contact-form textarea {
+                margin-bottom: 18px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
             }
         }
 
         html {
             scroll-behavior: smooth;
         }
+        /* aklnlkndsldnsjkld */
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            header p {
+                font-size: 1.1rem;
+            }
+
+            .project-overlay h3 {
+                font-size: 1.4rem;
+            }
+
+            .project-overlay p {
+                font-size: 1rem;
+            }
+
+            .project-card {
+                margin-bottom: 30px;
+            }
+
+            .contact-info p,
+            .contact-form button {
+                font-size: 1rem;
+            }
+        }
+/* awein csss */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+.contact-section {
+    padding: 60px 20px;
+    background-color: #1e90ff;
+    color: white;
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 40px;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+.contact-info a {
+    color: #1e90ff;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #104e8b;
+}
+
+.contact-form {
+    flex: 2;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #1e90ff;
+    outline: none;
+}
+
+.contact-form button {
+    padding: 15px 30px;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #104e8b;
+}
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    .container{
+        width: 100%;
+        height: 100vh;
+        background: #e3ebfe;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    button{
+        width: 270px;
+        height: 80px;
+        border: none;
+        outline: none;
+        background: #2f2f2f;
+        color: #fff;
+        font-size: 22px;
+        border-radius: 40px;
+        text-align: center;
+        box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    
+    .check-box{
+        width: 80px;
+        height: 80px;
+        border-radius: 40px;
+        box-shadow: 0 0 12px -2px rgba(0,0,0,0.5);
+        position: absolute;
+        top: 0;
+        right: -40px;
+        opacity: 0;
+    }
+    
+    .check-box svg{
+        width: 40px;
+        margin: 20px;
+    }
+    
+    svg path{
+        stroke-width: 3;
+        stroke: #fff;
+        stroke-dasharray: 34;
+        stroke-dashoffset: 34;
+        stroke-linecap: round;
+    }
+    
+    .active{
+        background: #ff2b75;
+        transition: 1s;
+    }
+    
+    .active .check-box{
+        right: 0;
+        opacity: 1;
+        transition: 1s;
+    }
+    
+    .active p{
+        margin-right: 125px;
+        transition: 1s;
+    }
+    
+    .active svg path{
+        stroke-dashoffset: 0;
+        transition: 1s;
+        transition-delay: 1s;
+    }
+     /* buttoncss */
+     button {
+        width: 300px; /* Adjusted width */
+        height: 70px; /* Adjusted height */
+        border: none;
+        outline: none;
+        background: #2f2f2f;
+        color: #fff;
+        font-size: 22px;
+        border-radius: 40px;
+        text-align: center;
+        box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    
+    .check-box {
+        width: 70px;  /* Adjusted size of the check-box */
+        height: 70px; /* Adjusted size of the check-box */
+        border-radius: 35px;
+        box-shadow: 0 0 12px -2px rgba(0,0,0,0.5);
+        position: absolute;
+        top: 0;
+        right: -35px;
+        opacity: 0;
+    }
+    
+    .check-box svg {
+        width: 35px;
+        margin: 17px; /* Adjusted for better positioning */
+    }
+    
+    .active {
+        background: #ff2b75;
+        transition: 1s;
+    }
+    
+    .active .check-box {
+        right: 0;
+        opacity: 1;
+        transition: 1s;
+    }
+    
+    .active p {
+        margin-right: 95px; /* Adjusted for button text position */
+        transition: 1s;
+    }
+    
+    .active svg path {
+        stroke-dashoffset: 0;
+        transition: 1s;
+        transition-delay: 1s;
+    }
+     /* Mobile Optimization */
+     @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            header p {
+                font-size: 1.1rem;
+            }
+
+            .contact-info,
+            .contact-form {
+                flex: 1 1 100%;
+            }
+
+            .contact-content {
+                flex-direction: column;
+            }
+
+            .skills {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .skills .skill {
+                width: 90px;
+                height: 90px;
+                margin-bottom: 25px;
+            }
+
+            .contact-form input,
+            .contact-form textarea {
+                margin-bottom: 18px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
     </style>
 </head>
 <body>
-    <header>
-        <img src="InShot_20240411_031554075.jpg" alt="Profile photo of Usman, a web developer">
-        <h1>Usman</h1>
-        <p>Creative Web Developer specializing in modern, responsive designs.</p>
-    </header>
+        <header>
+            <img src="InShot_20240411_031554075.jpg" alt="Profile photo of Usman, a web developer">
+            <h1>Usman</h1>
+            <p>Creative Web Developer specializing in modern, responsive designs.</p>
+        </header>
+    
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    
+        <section id="about" class="about-section">
+            <h2>About Me</h2>
+            <p>Hello! I am Usman, a passionate web developer proficient in creating modern, responsive websites using the latest technologies such as HTML, CSS, JavaScript, React, and Node.js. I love bringing ideas to life through clean code and excellent user experiences.</p>
+        </section>
+    
+        <section id="skills" class="skills-section">
+            <h2>Skills</h2>
+            <div class="skills">
+                <div class="skill"><span>HTML</span></div>
+                <div class="skill"><span>CSS</span></div>
+                <div class="skill"><span>JavaScript</span></div>
+                <div class="skill"><span>React</span></div>
+                <div class="skill"><span>Node.js</span></div>
+                <div class="skill"><span>MongoDB</span></div>
+            </div>
+        </section>
+    
+        <section id="projects" class="projects-section">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="Screenshot 2025-01-14 174543.png" alt="Project 1">
+                    <div class="project-overlay">
+                        <h3>Project 1</h3>
+                        <p>A to-do list is a simple tool to organize tasks by adding, editing, prioritizing, and marking them as complete.</p>
+                        <a href="https://todo-list-phi-indol-53.vercel.app/" class="view-project">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="Screenshot 2025-01-14 191556.png" alt="Project 2">
+                    <div class="project-overlay">
+                        <h3>Project 2</h3>
+                        <p>A number guess game involves guessing a randomly generated number within a range.</p>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <section id="about" class="about-section">
-        <h2>About Me</h2>
-        <p>Hello! I am Usman, a passionate web developer proficient in creating modern, responsive websites. My expertise includes JavaScript, React, Node.js, and other cutting-edge web technologies.</p>
-    </section>
-
-    <section id="skills" class="skills-section">
-        <h2>Skills</h2>
-        <div class="skills">
-            <div class="skill"><span>HTML</span></div>
-            <div class="skill"><span>CSS</span></div>
-            <div class="skill"><span>JavaScript</span></div>
-            <div class="skill"><span>React</span></div>
-            <div class="skill"><span>Node.js</span></div>
-            <div class="skill"><span>Bootstrap</span></div>
-        </div>
-    </section>
-
-    <section id="projects" class="projects-section">
-        <h2>Project Showcase</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <img src="Screenshot 2025-01-14 174543.png" alt="Screenshot of To-Do List App">
-                <div class="project-overlay">
-                    <h3>To-Do List App</h3>
-                    <p>Web-based to-do list application built with React and Node.js.</p>
-                    <a href="https://todo-list-phi-indol-53.vercel.app/" class="view-project">View Project</a>
+                        <!-- <p>A number guess game involves guessing a randomly generated number within a range.<p> -->
+                        <a href="https://number-guess-number.vercel.app/" class="view-project">View Project</a>
+                    </div>
+                </div>
+                <!-- Added New Project 3 -->
+                <div class="project-card">
+                    <img src="Screenshot 2025-01-14 175334.png" alt="Project 3">
+                    <div class="project-overlay">
+                        <h3>Project 3</h3>
+                        <p>A tool that generates strong, customizable passwords
+                        </p>
+                        <a href="https://password-generator-six-peach.vercel.app/" class="view-project">View Project</a>
+                    </div>
+                </div>
+                <!-- Added New Project 4 -->
+                <!-- <div class="project-card">
+                    <img src="your_image_path_4.png" alt="Project 4">
+                    <div class="project-overlay">
+                        <h3>Project 4</h3>
+                        <p>This is an example of a new project, like a movie search app that lets users find information about their favorite movies.</p>
+                        <a href="#" class="view-project">View Project</a>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+    
+        <section id="contact" class="contact-section">
+            <h2>Contact Me</h2>
+            <div class="contact-content">
+                <!-- Contact Information Section -->
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>If you have any questions or would like to collaborate, feel free to reach out!</p>
+                    <p><a href="mailto:usmanrafique078@gmail.com"><i class="fas fa-envelope"></i> usmanrafique078@gmail.com</a></p>
+                    <p><a href="tel:+923366056254"><i class="fas fa-mobile-alt"></i> +923366056254</a></p>
+                    <p><a href="https://www.linkedin.com/in/muhammad-usman-ab8b7022a"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
+                </div>
+    
+                <!-- Contact Form Section -->
+                <div class="contact-form">
+                    <h3>Contact Form</h3>
+                    <form action="submit_form.php" method="POST">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                        <!-- <button type="submit">Send Message</button> -->
+                        
+                            <div class="">
+                                <button id="btn">
+                                    <p id="btnText">Submit</p>
+                                    <div class="check-box">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                                            <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                                        </svg>
+                                    </div>
+                                </button>
+                            </div>
+                            <script type="text/javascript">
+                                const btn = document.querySelector("#btn");
+                                const btnText = document.querySelector("#btnText");
+                        
+                                btn.onclick = () => {
+                                    btnText.innerHTML = "Thanks";
+                                    btn.classList.add("active");
+                                };
+                            </script>
+                        
+                    </form>
                 </div>
             </div>
-            <div class="project-card">
-                <img src="Screenshot 2025-01-14 175334.png" alt="Screenshot of Password Generator">
-                <div class="project-overlay">
-                    <h3>Password Generator</h3>
-                    <p>Generates secure, random passwords for online security.</p>
-                    <a href="https://password-generator-six-peach.vercel.app/" class="view-project">View Project</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="Screenshot 2025-01-14 191556.png" alt="Screenshot of Number Guessing Game">
-                <div class="project-overlay">
-                    <h3>Number Guessing Game</h3>
-                    <p>Interactive number guessing game with a dynamic UI.</p>
-                    <a href="https://number-guess-number.vercel.app/" class="view-project">View Project</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-        <h2>Contact Me</h2>
-        <div class="contact-content">
-            <!-- Contact Information Section -->
-            <div class="contact-info">
-                <h3>Get in Touch</h3>
-                <p>If you have any questions or would like to collaborate, feel free to reach out!</p>
-                <p><a href="mailto:usmanrafique078@gmail.com"><i class="fas fa-envelope"></i> usmanrafique078@gmail.com</a></p>
-                <p><a href="tel:+923366056254"><i class="fas fa-mobile-alt"></i> +923366056254</a></p>
-                <p><a href="https://www.linkedin.com/in/usmanrafique78/"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
-            </div>
-
-            <!-- Contact Form Section -->
-            <div class="contact-form">
-                <h3>Contact Form</h3>
-                <form action="submit_form.php" method="POST">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-                    <textarea name="message" placeholder="Your Message" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Usman. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+        </section>
+        <footer>
+            <p>&copy; 2025 Usman. All rights reserved.</p>
+        </footer>
+        
+        <!-- <footer>
+            <p>© 2025 Usman. All rights reserved.</p>
+        </footer> -->
+    
+    </body>
+    </html
