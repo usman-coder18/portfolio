@@ -667,6 +667,45 @@
                 grid-template-columns: 1fr;
             }
         }
+        @media screen and (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .contact-info,
+    .contact-form {
+        flex: 1 1 100%;
+        max-width: 100%; /* Ensure full width on smaller screens */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px; /* Adjust font size for better readability */
+        padding: 10px;
+    }
+
+    .contact-form button {
+        font-size: 14px;
+        padding: 10px;
+        width: 100%; /* Button remains responsive */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact-form input,
+    .contact-form textarea {
+        padding: 8px;
+        font-size: 13px; /* Slightly smaller font size */
+    }
+
+    .contact-form button {
+        padding: 8px;
+        font-size: 13px;
+        width: 100%; /* Ensures button fits smaller screens */
+    }
+}
 
         html {
             scroll-behavior: smooth;
@@ -755,7 +794,7 @@
                 <div class="contact-info">
                     <h3>Get in Touch</h3>
                     <p>If you have any questions or would like to collaborate, feel free to reach out!</p>
-                    <p><a href="mailto:usmanrafique078@gmail.com"><i class="fas fa-envelope"></i> usmanrafique078@gmail.com</a></p>
+                    <p class="p-email"><a href="mailto:usmanrafique078@gmail.com"><i class="fas fa-envelope"></i> usmanrafique078@gmail.com</a></p>
                     <p><a href="tel:+923366056254"><i class="fas fa-mobile-alt"></i> +923366056254</a></p>
                     <p><a href="https://www.linkedin.com/in/muhammad-usman-ab8b7022a"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
                 </div>
